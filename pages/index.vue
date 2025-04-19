@@ -1,0 +1,120 @@
+<template>
+    <div class="hero">
+        <div class="hero-content">
+            <h1 class="title">Articles</h1>
+            <p class="subtitle" @click="clickArticle">Nuxtの導入</p>
+            <!-- <p class="subtitle">未来的な記事がここに集まる</p> -->
+            <!-- <button class="cta-button">記事を見る</button> -->
+        </div>
+    </div>
+</template>
+  
+<script setup>
+
+function clickArticle() {
+    navigateTo('articles/NuxtStart')
+}
+
+</script>
+
+<style>
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+</style>
+  
+<style scoped>
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/common/top_bg_pic.webp');
+    background-size: cover;
+    background-position: center;
+    animation: glitch 1s infinite, colorShift 5s infinite, lines 0.1s infinite;
+    z-index: -1;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.title {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #00ffcc;
+}
+
+.subtitle {
+    padding: 15px 30px;
+    background-color: #ff66cc;
+    border: none;
+    color: #000;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+/* .cta-button {
+    padding: 15px 30px;
+    background-color: #00ffcc;
+    border: none;
+    color: #000;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+} */
+
+.cta-button:hover {
+    background-color: #ff66cc;
+}
+
+/* 色の変化 */
+@keyframes colorShift {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    50% {
+        filter: hue-rotate(180deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+</style>
+  
