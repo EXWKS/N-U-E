@@ -9,9 +9,6 @@ export default defineNuxtConfig({
       crawlLinks: true,   // ← crawler がリンクを辿れるように
     }
   },
-  generate: {
-    dir: 'docs'
-  },
   compatibilityDate: '2024-11-01',
   devtools: { enabled: false }
 })

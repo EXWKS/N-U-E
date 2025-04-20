@@ -1,34 +1,29 @@
 <template>
     <div class="background">
         <div class="blog-container">
-            <h1 class="title">Nuxt3 初期設定手順</h1>
+            <h1 class="title">Nuxt3 GithubPagesデプロイ</h1>
             <div class="blog-text">
-                <p class="command">npx nuxi init my-nuxt-app</p>
-                <p class="text">すると <span class="highlight">Which package manager would you like to use?</span> と訊かれるので
-                    <span class="highlight">npm</span> を選択。
+                <p class="text">gh-pagesをインストール</p>
+                <p class="command">npm install gh-pages --save-dev</p>
+                <p class="command">
+                    "scripts": {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;"deploy": "gh-pages -d dist"<br>
+                    }
                 </p>
-                <p class="text">そのあと <span class="highlight">Initialize git repository?</span> と訊かれるので <span
-                        class="highlight">Yes</span> を選択（GitHubを利用するので）。</p>
-                <p class="text">そのあと <span class="highlight">Would you like to install any of the official modules</span>
-                    ときかれるが、特に今回は不要なので何も選択しない。</p>
-                <p class="text">プロジェクトができあがるので、</p>
-                <p class="command">cd my-nuxt-app</p>
-                <p class="command">npm install</p>
-                <p class="command">npm run dev</p>
-                <p class="text">これで <a href="http://localhost:3000" target="_blank" class="link">http://localhost:3000/</a>
-                    にWebブラウザでアクセスする。</p>
+                <p class="text">GithubのRepository > settings > Pages > Branch </p>
+                <p class="text">でgh-pagesを選択</p>
+                <p class="text">その後、</p>
+                <p class="command">npm run generate</p>
+                <p class="text">し、dist/を作成</p>
+                <p class="command">npm run deploy</p>
+                <p class="text">でgithub Pagesにアップする</p>
             </div>
         </div>
     </div>
 </template>
-  
-<script setup>
-// 特別なJSは不要
-</script>
-  
+
 <style scoped>
 .background {
-    /* position: relative; */
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -48,7 +43,7 @@
     background-image: url('/common/top_bg_pic.webp');
     background-size: cover;
     background-position: center;
-    animation: glitch 1s infinite, colorShift 5s infinite, lines 0.1s infinite;
+    animation: glitch 1s infinite, colorshift 5s infinite, lines 0.1s infinite;
     z-index: -2;
 }
 
@@ -93,6 +88,17 @@
     padding: 0.5rem 1rem;
     margin: 0.5rem 0;
     border-left: 4px solid #ff66cc;
+    white-space: pre;
+}
+
+.code-block {
+    background-color: #111;
+    color: #00ffcc;
+    padding: 1rem;
+    border-radius: 6px;
+    font-family: monospace;
+    white-space: pre;
+    overflow-x: auto;
 }
 
 .text {
@@ -108,11 +114,11 @@
 .link {
     color: #00ffcc;
     text-decoration: underline;
-    transition: color 0.3s;
+    transition: color 0.3s
 }
 
 .link:hover {
-    color: #ff66cc;
+    color: #ff66cc
 }
 
 @keyframes fadeIn {
@@ -121,7 +127,7 @@
         transform: translateY(10px);
     }
 
-    to {
+    fo {
         opacity: 1;
         transform: translateY(0);
     }
@@ -137,8 +143,7 @@
     }
 
     100% {
-        filter: hue-rotate(360deg);
+        filter: hue-rotate(360deg)
     }
 }
 </style>
-  

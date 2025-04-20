@@ -1,9 +1,12 @@
 <template>
     <div class="hero">
         <div class="hero-content">
-            <h1 class="title">Articles2</h1>
+            <h1 class="title">Articles3</h1>
             <NuxtLink to="articles/NuxtStart">
-                <p class="subtitle">Nuxtの導入</p>
+                <p class="cta-button">Nuxtの導入</p>
+            </NuxtLink>
+            <NuxtLink to="articles/NuxtGithubPages">
+                <p class="cta-button">NuxtをGuthubPageにアップ</p>
             </NuxtLink>
         </div>
     </div>
@@ -74,18 +77,7 @@ body {
     color: #00ffcc;
 }
 
-.subtitle {
-    padding: 15px 30px;
-    background-color: #ff66cc;
-    border: none;
-    color: #000;
-    font-size: 1.2em;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-/* .cta-button {
+.cta-button {
     padding: 15px 30px;
     background-color: #00ffcc;
     border: none;
@@ -94,7 +86,7 @@ body {
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s;
-} */
+}
 
 .cta-button:hover {
     background-color: #ff66cc;
