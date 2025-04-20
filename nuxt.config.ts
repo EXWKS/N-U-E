@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   app: {
-    cdnURL: '/N-U-E/'
+    baseURL: '/N-U-E/'
   },
   nitro: {
     prerender: {

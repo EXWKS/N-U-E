@@ -13,10 +13,6 @@
 
 const base = useRuntimeConfig().app.baseURL
 
-// function clickArticle() {
-//     navigateTo(`${base}articles/NuxtStart`)
-// }
-
 </script>
 
 <style>
