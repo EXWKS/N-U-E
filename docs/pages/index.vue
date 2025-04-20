@@ -2,7 +2,7 @@
     <div class="hero">
         <div class="hero-content">
             <h1 class="title">Articles1</h1>
-            <NuxtLink :to="`${base}articles/NuxtStart`">
+            <NuxtLink to="articles/NuxtStart">
                 <p class="subtitle">Nuxtの導入</p>
             </NuxtLink>
         </div>
