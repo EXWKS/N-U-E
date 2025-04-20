@@ -1,19 +1,21 @@
 <template>
     <div class="hero">
         <div class="hero-content">
-            <h1 class="title">Articles</h1>
-            <p class="subtitle" @click="clickArticle">Nuxtの導入</p>
-            <!-- <p class="subtitle">未来的な記事がここに集まる</p> -->
-            <!-- <button class="cta-button">記事を見る</button> -->
+            <h1 class="title">Articles1</h1>
+            <NuxtLink :to="`${base}articles/NuxtStart`">
+                <p class="subtitle">Nuxtの導入</p>
+            </NuxtLink>
         </div>
     </div>
 </template>
   
 <script setup>
 
-function clickArticle() {
-    navigateTo('articles/NuxtStart')
-}
+const base = useRuntimeConfig().app.baseURL
+
+// function clickArticle() {
+//     navigateTo(`${base}articles/NuxtStart`)
+// }
 
 </script>
 
